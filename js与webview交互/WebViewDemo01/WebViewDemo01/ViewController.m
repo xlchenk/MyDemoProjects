@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <objc/message.h>
 @interface ViewController ()<UIWebViewDelegate>
 @property(nonatomic,strong) UIWebView *webView;
 @end
@@ -67,13 +67,16 @@
 //            [self respondHTMLMethod:parms[1]];
 //        }
         
-        
-        
+    
         //2、第二种方法  如果方法又参数 但是获取的方法名称m并没有a带参数 所以拼接以下
         SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@:",methodName]);
-        if ([self respondsToSelector:sel]) {
-            [self performSelector:sel withObject:parms[1]];
-        }
+//        if ([self respondsToSelector:sel]) {
+//            [self performSelector:sel withObject:parms[1]];
+//        }
+//
+        
+    //第三种
+        objc_msgSend(self, sel,parms[1]);
         
         return NO;
     }
