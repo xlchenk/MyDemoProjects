@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="000---cssDemo.css">
+    <style>
+        div {
+            width: 80%;
+        }
+
+        div, .cls {
+            background: red;
+        }
+
+        .cls {
+            background: gray;
+        }
+
+        #myDiv {
+            color: red;
+        }
+
+        div.cls {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="001---HTMLDemo.html" method="get">
+        姓名: <input type="text" name="name" placeholder="请输入名字" style="width: 200px;color: red;background-color: #FFFF00"/><br/>
+        密码: <input type="password" name="pwd" placeholder="请输入密码"/><br/>
+        <p>选择精通语言:</p>
+        <input type="checkbox" name="lang" value="OC">OC<br/>
+        <input type="checkbox" name="lang" value="Swift">Swift<br/>
+        <input type="checkbox" name="lang" value="Java">Java<br/>
+        <input type="checkbox" name="lang" value="Python">Python<br/>
+        <p>性别</p>
+        <input type="radio" name="sex" value="男">男&nbsp;<input type="radio" name="女" name="sex" value="女">女&nbsp;<br/>
+        <p>生日</p>
+        <input type="datetime-local"/><br/>
+        <p>肤色</p>
+        <input type="color" /><br />
+        <input type="button" value="我是按钮" /><br />
+        <input type="submit" value="提交">
+    </form>
+    <!-- 段落 -->
+    <div>
+        <p>这里是段落</p>
+    </div>
+
+    <div class="cls">
+        <p>这里是段落</p>
+    </div>
+
+    <div id="myDiv">
+        <p>这里是段落</p>
+    </div>
+
+    <p class="cls">单独一个段落</p>
+</body>
+</html>

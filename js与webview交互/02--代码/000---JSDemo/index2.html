@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script>
+        function loadURL(url) {
+            var iFrame;
+            iFrame = document.createElement("iframe");
+            iFrame.setAttribute("src", url);
+            iFrame.setAttribute("style", "display:none;");
+            iFrame.setAttribute("height", "0px");
+            iFrame.setAttribute("width", "0px");
+            iFrame.setAttribute("frameborder", "0");
+            document.body.appendChild(iFrame);
+            iFrame.parentNode.removeChild(iFrame);
+            iFrame = null;
+        }
+
+        function showAlert(messgae){
+            alert('我是一个可爱的弹框 \n'+messgae);
+            return "token";
+        }
+        function submit(){
+            alert('提示框');
+            loadURL("tzedu://jsCallOC?username=Cooci&password=123456");
+            var tz_img = document.getElementById("tz_image");
+            tz_img.innerHTML = "<img src='data:image/page;base64' style='width: 100px'"
+        }//"+bas+"'>"
+    </script>
+</head>
+<body>
+
+    <input type="button" value="提交" onclick="submit()" /> <br />
+    <input type="button" value="弹框" onclick="showAlert('hello JS')" /><br />
+
+    <div id="tz_image"></div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script>
+        function showAlert(){
+            showMessage("点击了弹框按钮...",arr);
+        }
+
+        function submit(){
+            alert('submit');
+        }
+    
+        function ocCalljs(dict){
+            var name = dict['name'];
+            var age  = dict['age'];
+            alert(name + age);
+            // 传回去
+            showDict(dict)
+        }
+    
+    </script>
+</head>
+<body>
+    
+    <input id="submit" type="submit" value="我是提交" onclick="submit()"><br/>
+    <input type="button" value="弹框" onclick="showAlert()" /><br/>
+    <div/>
+</body>
+</html>

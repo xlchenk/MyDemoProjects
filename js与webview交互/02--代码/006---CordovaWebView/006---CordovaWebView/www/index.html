@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+
+        function cordovaSubmit(){
+
+            // successCallback : 成功的回调方法
+            // failCallback : 失败的回调方法
+            // server : 所要请求的服务名字，就是插件类的名字
+            // action : 所要请求的服务具体操作，其实就是Native 的方法名，字符串。
+            // actionArgs : 请求操作所带的参数，这是个数组。
+            //cordova.exec(successCallback, failCallback, service, action, actionArgs);
+
+            cordova.exec(null,null,"KCPlugin","cordovaSubmit",['我是毁掉数据A','BBBBB']);
+            //cordova.exec(cordovaButton,null,"KCPlugin","cordovaSubmit",['我是毁掉数据A','BBBBB']);
+        }
+
+        function cordovaButton(messgae){
+            alert(messgae);
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="button" value="提交" onclick="cordovaSubmit()" /> <br />
+    <input type="button" value="弹框" onclick="cordovaButton('我是一个弹框')" /> <br />
+
+</body>
+</html>

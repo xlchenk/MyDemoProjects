@@ -1,0 +1,5 @@
+XSym
+0053
+0dc15625a132ab63d006e6994baa7ebe
+../../../OCMock/Source/OCMock/NSObject+OCMAdditions.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

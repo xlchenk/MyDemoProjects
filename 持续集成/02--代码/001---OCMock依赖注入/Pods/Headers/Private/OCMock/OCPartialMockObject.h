@@ -1,0 +1,5 @@
+XSym
+0051
+e5d5b718ffba16454b4a80c515070444
+../../../OCMock/Source/OCMock/OCPartialMockObject.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

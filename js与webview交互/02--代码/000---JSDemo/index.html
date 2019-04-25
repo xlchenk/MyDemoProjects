@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+
+        function cordovaSubmit(){
+
+            // successCallback : 成功的回调方法
+            // failCallback : 失败的回调方法
+            // server : 所要请求的服务名字，就是插件类的名字
+            // action : 所要请求的服务具体操作，其实就是Native 的方法名，字符串。
+            // actionArgs : 请求操作所带的参数，这是个数组。
+            //cordova.exec(successCallback, failCallback, service, action, actionArgs);
+
+            cordova.exec(null,null,"KCPlugin","cordovaSubmit",['我是毁掉数据A','BBBBB');
+            //cordova.exec(cordovaButton,null,"KCPlugin","cordovaSubmit",['我是毁掉数据A','BBBBB');
+
+        }
+
+        function cordovaButton(messgae){
+            alert(messgae);
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="提交" onclick="cordovaSubmit()" /> <br />
+<input type="button" value="弹框" onclick="cordovaButton()" /> <br />
+
+</body>
+</html>
+
+
+public void ProcessRequest(HttpContext context)
+{
+    try{
+        context.Response.ContentEncoding = Encoding.UTF8;
+        context.Response.ContentType = “text/json";
+
+        string session = context.Request.getHeader[“session_ID”];
+        //session过期
+        context.Response.StatusCode = 700;
+        return;
+
+        context.Response.StatusCode = 200;
+        //该函数处理业务
+        ProcessRequest1(context); //输出数据给前台
+
+        }
+    catch (Exception ex){
+        //异常信息和发生时间保存到数据库
+        context.Response.StatusCode = 800;
+        context.Response.Headers.Add("error", "服务器错误！");
+        context.Response.ContentType = "text/json";
+    ｝
+}
+
+

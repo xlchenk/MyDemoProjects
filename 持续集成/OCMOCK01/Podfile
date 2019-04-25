@@ -1,0 +1,14 @@
+# platform :ios, '8.0'
+
+target 'OCMOCK01' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+   target 'OCMOCK01Tests' do
+   inherit! :search_paths
+    pod 'OCMock'
+    
+   end
+
+
+
+end
+

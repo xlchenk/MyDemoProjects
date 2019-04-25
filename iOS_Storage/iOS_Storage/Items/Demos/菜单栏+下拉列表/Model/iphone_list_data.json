@@ -1,0 +1,18 @@
+{
+	"result": true,
+	"data": {
+		"detail_list": [ {
+			"name": "型号1",
+			"id": 1
+		}, {
+			"name": "型号2",
+			"id": 2
+		}, {
+			"name": "型号3",
+			"id": 3
+		}]
+	},
+	"msg": "ok",
+	"code": 200,
+	"executed": "0.0320830345"
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS响应</title>
+    <script>
+        function showAlert(str){
+            alert('点击响应了,我是弹框 '+str)
+        }
+        function sum(a, b) {
+            console.log(a+b);
+            return a + b;
+        }
+        function drawRect() {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.moveTo(10,10);
+            ctx.lineTo(150,200);
+            ctx.lineTo(290,10);
+            ctx.closePath();
+
+            ctx.fillStyle="#FF0000";
+            ctx.strokeStyle="#00FFF";
+            ctx.lineWidth=10;
+
+            ctx.stroke();
+            ctx.fill();
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" name="点击响应" value="哈哈" onclick="showAlert('点我了?')"><br/>
+    <input type="button" value="求两个数的和" onclick="sum(10,20)"><br/>
+    <input type="button" value="画图" onclick="drawRect()"><br/>
+    <canvas width="300px" height="300px" id="myCanvas"style="background-color: aqua"/>
+</body>
+</html>

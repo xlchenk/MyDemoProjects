@@ -1,0 +1,18 @@
+{
+	"result": true,
+	"data": {
+		"menu_list": [ {
+			"name": "iPhone",
+			"id": 1
+		}, {
+			"name": "iPad",
+			"id": 2
+		}, {
+			"name": "Mac",
+			"id": 3
+		}]
+	},
+	"msg": "ok",
+	"code": 200,
+	"executed": "0.0320830345"
+}

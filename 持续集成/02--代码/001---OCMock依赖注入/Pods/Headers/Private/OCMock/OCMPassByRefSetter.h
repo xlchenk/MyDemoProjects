@@ -1,0 +1,5 @@
+XSym
+0050
+c23499be558f4cdb0852e56c02d0d5c3
+../../../OCMock/Source/OCMock/OCMPassByRefSetter.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

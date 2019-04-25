@@ -1,0 +1,5 @@
+XSym
+0044
+43c135886cde09fcc89df4443d8abc6a
+../../../OCMock/Source/OCMock/OCMockObject.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

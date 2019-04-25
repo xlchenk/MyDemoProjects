@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script>
+        function showAlert(name){
+            alert(name);
+            return function handle(){
+                alert('我是一个弹窗'+name);
+                return name + '返回给OC';
+                }
+            }
+    </script>
+</head>
+<body>
+    
+    <a href="tzedu://getSum:/helloword/js">点击跳转效应OC方法</a>
+    
+    <a href="tzedu://getPlus/helloword/js">点击跳转效应</a>
+
+    <form id="myform" action="tzedu://www.baidu.com/hello/j/Users/cooci/Desktop/VIP/网络/网络第三天/02--代码/001---WebView初体验/001---WebView初体验/index.htmls" method="get">
+        <input id="submit" type="submit" value="我是提交">
+    </form>
+    <input type="button" value="弹框" onclick="showAlert('hello JS')"><br/>
+    
+</body>
+</html>

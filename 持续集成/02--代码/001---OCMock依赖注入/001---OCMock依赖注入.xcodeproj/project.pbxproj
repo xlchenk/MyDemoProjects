@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45A8CD928D27489F493F557C /* libPods-001---OCMock依赖注入.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D2C2A3FFA300BCC4FBAB4B /* libPods-001---OCMock依赖注入.a */; };
+		7A523DD821340DD10087880A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523DD721340DD10087880A /* AppDelegate.m */; };
+		7A523DDB21340DD10087880A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523DDA21340DD10087880A /* ViewController.m */; };
+		7A523DDE21340DD10087880A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A523DDC21340DD10087880A /* Main.storyboard */; };
+		7A523DE021340DD40087880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A523DDF21340DD40087880A /* Assets.xcassets */; };
+		7A523DE321340DD40087880A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A523DE121340DD40087880A /* LaunchScreen.storyboard */; };
+		7A523DE621340DD40087880A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523DE521340DD40087880A /* main.m */; };
+		7A523E0121342CEA0087880A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E0021342CEA0087880A /* Person.m */; };
+		7A523E1521342E2F0087880A /* KCOCMockTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E1421342E2F0087880A /* KCOCMockTestCase.m */; };
+		7A523E1821342EDB0087880A /* KCBaseTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E1721342EDB0087880A /* KCBaseTestCase.m */; };
+		7A523E1B21342F940087880A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E1921342F930087880A /* DetailViewController.m */; };
+		7A523E2521342F9F0087880A /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E1D21342F9E0087880A /* Dog.m */; };
+		7A523E2621342F9F0087880A /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E2021342F9E0087880A /* Manager.m */; };
+		7A523E2721342F9F0087880A /* OCMockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E2321342F9E0087880A /* OCMockViewController.m */; };
+		7A523E2821342F9F0087880A /* IDCardView.h.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A523E2421342F9E0087880A /* IDCardView.h.m */; };
+		9CD46CDEC3EDA77EBF35A943 /* libPods-001---OCMock依赖注入Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50C191EEF0EC2C09DDEA20F /* libPods-001---OCMock依赖注入Tests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A523E0B21342D250087880A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A523DCB21340DD10087880A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A523DD221340DD10087880A;
+			remoteInfo = "001---OCMock依赖注入";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7A523DD321340DD10087880A /* 001---OCMock依赖注入.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "001---OCMock依赖注入.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A523DD621340DD10087880A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A523DD721340DD10087880A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A523DD921340DD10087880A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7A523DDA21340DD10087880A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A523DDD21340DD10087880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A523DDF21340DD40087880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A523DE221340DD40087880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A523DE421340DD40087880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A523DE521340DD40087880A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A523DFF21342CEA0087880A /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		7A523E0021342CEA0087880A /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		7A523E0621342D250087880A /* 001---OCMock依赖注入Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "001---OCMock依赖注入Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A523E0A21342D250087880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A523E1421342E2F0087880A /* KCOCMockTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCOCMockTestCase.m; sourceTree = "<group>"; };
+		7A523E1621342EDB0087880A /* KCBaseTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCBaseTestCase.h; sourceTree = "<group>"; };
+		7A523E1721342EDB0087880A /* KCBaseTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCBaseTestCase.m; sourceTree = "<group>"; };
+		7A523E1921342F930087880A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7A523E1A21342F930087880A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7A523E1D21342F9E0087880A /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		7A523E1E21342F9E0087880A /* IDCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDCardView.h; sourceTree = "<group>"; };
+		7A523E1F21342F9E0087880A /* OCMockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockViewController.h; sourceTree = "<group>"; };
+		7A523E2021342F9E0087880A /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		7A523E2121342F9E0087880A /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		7A523E2221342F9E0087880A /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		7A523E2321342F9E0087880A /* OCMockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMockViewController.m; sourceTree = "<group>"; };
+		7A523E2421342F9E0087880A /* IDCardView.h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDCardView.h.m; sourceTree = "<group>"; };
+		7D22ED19F77371216EC589E1 /* Pods-001---OCMock依赖注入.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-001---OCMock依赖注入.debug.xcconfig"; path = "Pods/Target Support Files/Pods-001---OCMock依赖注入/Pods-001---OCMock依赖注入.debug.xcconfig"; sourceTree = "<group>"; };
+		A7D2C2A3FFA300BCC4FBAB4B /* libPods-001---OCMock依赖注入.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-001---OCMock依赖注入.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C611184A736AA29C3CBC6045 /* Pods-001---OCMock依赖注入.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-001---OCMock依赖注入.release.xcconfig"; path = "Pods/Target Support Files/Pods-001---OCMock依赖注入/Pods-001---OCMock依赖注入.release.xcconfig"; sourceTree = "<group>"; };
+		D0CB59E4B8EFED6AA5235F47 /* Pods-001---OCMock依赖注入Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-001---OCMock依赖注入Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-001---OCMock依赖注入Tests/Pods-001---OCMock依赖注入Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E4B838A4D6EE227B683C9947 /* Pods-001---OCMock依赖注入Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-001---OCMock依赖注入Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-001---OCMock依赖注入Tests/Pods-001---OCMock依赖注入Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E50C191EEF0EC2C09DDEA20F /* libPods-001---OCMock依赖注入Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-001---OCMock依赖注入Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A523DD021340DD10087880A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A8CD928D27489F493F557C /* libPods-001---OCMock依赖注入.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A523E0321342D250087880A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD46CDEC3EDA77EBF35A943 /* libPods-001---OCMock依赖注入Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64F0DA8FE1544A3DA70BE697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7D2C2A3FFA300BCC4FBAB4B /* libPods-001---OCMock依赖注入.a */,
+				E50C191EEF0EC2C09DDEA20F /* libPods-001---OCMock依赖注入Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A523DCA21340DD10087880A = {
+			isa = PBXGroup;
+			children = (
+				7A523DD521340DD10087880A /* 001---OCMock依赖注入 */,
+				7A523E0721342D250087880A /* 001---OCMock依赖注入Tests */,
+				7A523DD421340DD10087880A /* Products */,
+				F396619FE76A20E4BF2FF355 /* Pods */,
+				64F0DA8FE1544A3DA70BE697 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A523DD421340DD10087880A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A523DD321340DD10087880A /* 001---OCMock依赖注入.app */,
+				7A523E0621342D250087880A /* 001---OCMock依赖注入Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A523DD521340DD10087880A /* 001---OCMock依赖注入 */ = {
+			isa = PBXGroup;
+			children = (
+				7A523E1C21342F9E0087880A /* OCMockGrounp */,
+				7A523DD621340DD10087880A /* AppDelegate.h */,
+				7A523DD721340DD10087880A /* AppDelegate.m */,
+				7A523DD921340DD10087880A /* ViewController.h */,
+				7A523DDA21340DD10087880A /* ViewController.m */,
+				7A523E1A21342F930087880A /* DetailViewController.h */,
+				7A523E1921342F930087880A /* DetailViewController.m */,
+				7A523DFF21342CEA0087880A /* Person.h */,
+				7A523E0021342CEA0087880A /* Person.m */,
+				7A523DDC21340DD10087880A /* Main.storyboard */,
+				7A523DDF21340DD40087880A /* Assets.xcassets */,
+				7A523DE121340DD40087880A /* LaunchScreen.storyboard */,
+				7A523DE421340DD40087880A /* Info.plist */,
+				7A523DE521340DD40087880A /* main.m */,
+			);
+			path = "001---OCMock依赖注入";
+			sourceTree = "<group>";
+		};
+		7A523E0721342D250087880A /* 001---OCMock依赖注入Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7A523E1621342EDB0087880A /* KCBaseTestCase.h */,
+				7A523E1721342EDB0087880A /* KCBaseTestCase.m */,
+				7A523E1421342E2F0087880A /* KCOCMockTestCase.m */,
+				7A523E0A21342D250087880A /* Info.plist */,
+			);
+			path = "001---OCMock依赖注入Tests";
+			sourceTree = "<group>";
+		};
+		7A523E1C21342F9E0087880A /* OCMockGrounp */ = {
+			isa = PBXGroup;
+			children = (
+				7A523E2121342F9E0087880A /* Dog.h */,
+				7A523E1D21342F9E0087880A /* Dog.m */,
+				7A523E1E21342F9E0087880A /* IDCardView.h */,
+				7A523E2421342F9E0087880A /* IDCardView.h.m */,
+				7A523E2221342F9E0087880A /* Manager.h */,
+				7A523E2021342F9E0087880A /* Manager.m */,
+				7A523E1F21342F9E0087880A /* OCMockViewController.h */,
+				7A523E2321342F9E0087880A /* OCMockViewController.m */,
+			);
+			path = OCMockGrounp;
+			sourceTree = "<group>";
+		};
+		F396619FE76A20E4BF2FF355 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D22ED19F77371216EC589E1 /* Pods-001---OCMock依赖注入.debug.xcconfig */,
+				C611184A736AA29C3CBC6045 /* Pods-001---OCMock依赖注入.release.xcconfig */,
+				E4B838A4D6EE227B683C9947 /* Pods-001---OCMock依赖注入Tests.debug.xcconfig */,
+				D0CB59E4B8EFED6AA5235F47 /* Pods-001---OCMock依赖注入Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A523DD221340DD10087880A /* 001---OCMock依赖注入 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A523DE921340DD40087880A /* Build configuration list for PBXNativeTarget "001---OCMock依赖注入" */;
+			buildPhases = (
+				19DA5975FA10587B91ED0851 /* [CP] Check Pods Manifest.lock */,
+				7A523DCF21340DD10087880A /* Sources */,
+				7A523DD021340DD10087880A /* Frameworks */,
+				7A523DD121340DD10087880A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "001---OCMock依赖注入";
+			productName = "001---OCMock依赖注入";
+			productReference = 7A523DD321340DD10087880A /* 001---OCMock依赖注入.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A523E0521342D250087880A /* 001---OCMock依赖注入Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A523E0D21342D250087880A /* Build configuration list for PBXNativeTarget "001---OCMock依赖注入Tests" */;
+			buildPhases = (
+				3B1462C19456064D1CE49B0A /* [CP] Check Pods Manifest.lock */,
+				7A523E0221342D250087880A /* Sources */,
+				7A523E0321342D250087880A /* Frameworks */,
+				7A523E0421342D250087880A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A523E0C21342D250087880A /* PBXTargetDependency */,
+			);
+			name = "001---OCMock依赖注入Tests";
+			productName = "001---OCMock依赖注入Tests";
+			productReference = 7A523E0621342D250087880A /* 001---OCMock依赖注入Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A523DCB21340DD10087880A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Cooci;
+				TargetAttributes = {
+					7A523DD221340DD10087880A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					7A523E0521342D250087880A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7A523DD221340DD10087880A;
+					};
+				};
+			};
+			buildConfigurationList = 7A523DCE21340DD10087880A /* Build configuration list for PBXProject "001---OCMock依赖注入" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A523DCA21340DD10087880A;
+			productRefGroup = 7A523DD421340DD10087880A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A523DD221340DD10087880A /* 001---OCMock依赖注入 */,
+				7A523E0521342D250087880A /* 001---OCMock依赖注入Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A523DD121340DD10087880A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A523DE321340DD40087880A /* LaunchScreen.storyboard in Resources */,
+				7A523DE021340DD40087880A /* Assets.xcassets in Resources */,
+				7A523DDE21340DD10087880A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A523E0421342D250087880A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19DA5975FA10587B91ED0851 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-001---OCMock依赖注入-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B1462C19456064D1CE49B0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-001---OCMock依赖注入Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A523DCF21340DD10087880A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A523E2821342F9F0087880A /* IDCardView.h.m in Sources */,
+				7A523E1B21342F940087880A /* DetailViewController.m in Sources */,
+				7A523DDB21340DD10087880A /* ViewController.m in Sources */,
+				7A523DE621340DD40087880A /* main.m in Sources */,
+				7A523E2521342F9F0087880A /* Dog.m in Sources */,
+				7A523E2721342F9F0087880A /* OCMockViewController.m in Sources */,
+				7A523E0121342CEA0087880A /* Person.m in Sources */,
+				7A523E2621342F9F0087880A /* Manager.m in Sources */,
+				7A523DD821340DD10087880A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A523E0221342D250087880A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A523E1821342EDB0087880A /* KCBaseTestCase.m in Sources */,
+				7A523E1521342E2F0087880A /* KCOCMockTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A523E0C21342D250087880A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A523DD221340DD10087880A /* 001---OCMock依赖注入 */;
+			targetProxy = 7A523E0B21342D250087880A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A523DDC21340DD10087880A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A523DDD21340DD10087880A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A523DE121340DD40087880A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A523DE221340DD40087880A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A523DE721340DD40087880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A523DE821340DD40087880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A523DEA21340DD40087880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D22ED19F77371216EC589E1 /* Pods-001---OCMock依赖注入.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5LAHK8PW6;
+				INFOPLIST_FILE = "001---OCMock依赖注入/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tz.cn.-01---OCMock----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A523DEB21340DD40087880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C611184A736AA29C3CBC6045 /* Pods-001---OCMock依赖注入.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5LAHK8PW6;
+				INFOPLIST_FILE = "001---OCMock依赖注入/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tz.cn.-01---OCMock----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A523E0E21342D250087880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4B838A4D6EE227B683C9947 /* Pods-001---OCMock依赖注入Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5LAHK8PW6;
+				INFOPLIST_FILE = "001---OCMock依赖注入Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tz.cn.-01---OCMock----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/001---OCMock依赖注入.app/001---OCMock依赖注入";
+			};
+			name = Debug;
+		};
+		7A523E0F21342D250087880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CB59E4B8EFED6AA5235F47 /* Pods-001---OCMock依赖注入Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5LAHK8PW6;
+				INFOPLIST_FILE = "001---OCMock依赖注入Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tz.cn.-01---OCMock----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/001---OCMock依赖注入.app/001---OCMock依赖注入";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A523DCE21340DD10087880A /* Build configuration list for PBXProject "001---OCMock依赖注入" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A523DE721340DD40087880A /* Debug */,
+				7A523DE821340DD40087880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A523DE921340DD40087880A /* Build configuration list for PBXNativeTarget "001---OCMock依赖注入" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A523DEA21340DD40087880A /* Debug */,
+				7A523DEB21340DD40087880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A523E0D21342D250087880A /* Build configuration list for PBXNativeTarget "001---OCMock依赖注入Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A523E0E21342D250087880A /* Debug */,
+				7A523E0F21342D250087880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A523DCB21340DD10087880A /* Project object */;
+}
