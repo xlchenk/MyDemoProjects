@@ -44,10 +44,8 @@
 }
 
 -(void)respondHTMLMethod:(NSString *)message{
-
-    NSLog(@"dfsa23423%@",message);
-    //    NSString * str = [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert('sldjfljl')"];
-    //    NSLog(@"----%@",str);
+    NSString * str = [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert('返回给JS的数据')"];
+       NSLog(@"%@----%@",message,str);
 }
 
 #pragma mark -- delegate
@@ -65,13 +63,20 @@
     //三中方法实现
     //1、判断scheme名称
     if ([scheme isEqualToString:@"cany"]) {
-        if ([methodName isEqualToString:@"respondHTMLMethod"]) {
-            [self respondHTMLMethod:parms[1]];
+//        if ([methodName isEqualToString:@"respondHTMLMethod"]) {
+//            [self respondHTMLMethod:parms[1]];
+//        }
+        
+        
+        
+        //2、第二种方法  如果方法又参数 但是获取的方法名称m并没有a带参数 所以拼接以下
+        SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@:",methodName]);
+        if ([self respondsToSelector:sel]) {
+            [self performSelector:sel withObject:parms[1]];
         }
+        
+        return NO;
     }
-    //2、第二种方法
-    
-    
     return YES;
 }
 //开始加载

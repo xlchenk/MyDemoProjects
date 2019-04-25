@@ -7,10 +7,8 @@
         function showAlert(messgae){
             // 如果出现了iOS 异步情况怎么处理?
             //messgae = messgae + 'xixi';
-            return function handle(){
-                alert('我是一个可爱的弹框 \n'+messgae);
-                return messgae + '回来了';
-            }
+            alert('我是一个可爱的弹框 \n'+messgae);
+            return messgae + '回来了';
         }
 
         function submit(){
@@ -22,16 +20,16 @@
 <body>
     
     <a href="tzedu://getSum:/hello word/js">点击跳转效应OC方法</a>
-    <form id="myform" action="tzedu://www.baidu.com" method="get">
+    <form id="myform" action="tzedu:///getSum:/hello word/js" method="get">
         <input id="submit" type="submit" value="我是提交">
     </form>
     <input type="button" value="弹框" onclick="showAlert('hello JS')"><br/>
     
     <script>
-        var sbmt = document.getElementById('sbmt');
+        var sbmt = document.getElementById('submit');
         sbmt.onclick = function(event) {
             window.location.href = "tzedu:///getSum:/hello word/js";
-            alert('1234');
+<!--            alert('1234');-->
         };
     </script>
 </body>

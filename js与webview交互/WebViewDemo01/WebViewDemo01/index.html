@@ -11,7 +11,7 @@
         <form id="" action="https://www.baidu.com" method="get">
         	 <input type="submit" name="提交按钮" value="点击提交">
         </form>
-        <input id="showInput" type="button" name="弹窗" value="弹窗">
+        <input id="showInput" type="button" name="弹窗" value="弹窗JS调OC方法">
         <div style="width: 100px;height: 100px;background: red;" id="square"></div>
 	</div>
 </body>
@@ -19,7 +19,7 @@
 <script type="text/javascript" >
 
 	 function showAlert(message){
-      alert(message);
+          alert(message);
       return '这是一个alert'+message;
 	 }
 
@@ -35,7 +35,7 @@ function OCInvokeJSMethodAlert(message){
       var inputEvent = document.getElementById('showInput');
       inputEvent.onclick = function (event){
       	 window.location.href = "cany://respondHTMLMethod:/hello word/xiaomao";
-             
+            
 
       }
 
