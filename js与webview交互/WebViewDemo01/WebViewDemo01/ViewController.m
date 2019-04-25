@@ -44,10 +44,10 @@
 }
 
 -(void)respondHTMLMethod:(NSString *)message{
-   
-//    NSString * str = [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert('sldjfljl')"];
-//    NSLog(@"----%@",str);
+
     NSLog(@"dfsa23423%@",message);
+    //    NSString * str = [self.webView stringByEvaluatingJavaScriptFromString:@"showAlert('sldjfljl')"];
+    //    NSLog(@"----%@",str);
 }
 
 #pragma mark -- delegate
@@ -64,12 +64,12 @@
     NSLog(@"pathComponents--%@",parms);
     //三中方法实现
     //1、判断scheme名称
-   
     if ([scheme isEqualToString:@"cany"]) {
         if ([methodName isEqualToString:@"respondHTMLMethod"]) {
             [self respondHTMLMethod:parms[1]];
         }
     }
+    //2、第二种方法
     
     
     return YES;
