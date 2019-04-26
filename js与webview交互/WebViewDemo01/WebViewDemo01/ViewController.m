@@ -60,6 +60,7 @@
     NSLog(@"URL.host-%@",methodName);//方法名称
     NSLog(@"request.URL.path-%@",request.URL.path);
     NSLog(@"pathComponents--%@",parms);
+    NSLog(@"%@",request.URL.absoluteString);
     //三中方法实现
     //1、判断scheme名称
     if ([scheme isEqualToString:@"cany"]) {

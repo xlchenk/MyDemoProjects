@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>静态网页</title>
+</head>
+<body>
+	<div>
+		<a href="">点击跳转按钮</a>
+
+        <form id="" action="https://www.baidu.com" method="get">
+        	 <input type="submit" name="提交按钮" value="点击提交">
+        </form>
+        <input id="showInput" type="button" name="弹窗" value="弹窗JS调OC方法" onclick="showEatFood(['tudou','baiai'])">
+        <div style="width: 100px;height: 100px;background: red;" id="square"></div>
+	</div>
+</body>	
+
+<script type="text/javascript" >
+
+	 function showUserMessage(name,age,grade) {
+	 	var	message = name+age+grade;
+	 	alert(message);
+	 	return  message;
+	 }
+
+	 function showAlert(message){
+          alert(message);
+      return '这是一个alert'+message;
+	 }
+
+    //OC返回来的数据
+    function callBlockInfo(dict) {
+    	 var name = dict['name'];
+         var age  = dict['age'];
+         alert('OC返回来的数据'+name+age	);
+    }
+
+
+      // var inputEvent = document.getElementById('showInput');
+      // inputEvent.onclick = function (event){
+      	    
+
+      // }
+
+
+</script>
+</html>

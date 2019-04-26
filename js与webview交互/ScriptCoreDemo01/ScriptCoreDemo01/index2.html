@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>静态网页</title>
+</head>
+<body>
+	<div>
+		<a href="">点击跳转按钮</a><br/>
+
+        <input type="button" value="js操作OC对象" onclick="showAlert()" /> <br />
+        <input type="button" value="打开相册" onclick="openPhotoAlbum()" /><br />
+        
+        <div id="bg_image"></div>
+        <div style="width: 100px;height: 100px;background: red;" id="square"></div>
+	</div>
+</body>	
+
+<script type="text/javascript" >
+
+	 function showUserMessage(name,age,grade) {
+	 	var	message = name+age+grade;
+	 	alert(message);
+	 	return  message;
+	 }
+
+	 function showAlert(){
+         jsObject.name = 'hello 小明';
+         alert(jsObject.name+jsObject.updateUI('canshu','leixing'));
+      
+	 }
+    
+    function openPhotoAlbum() {
+    	initImagePicker();
+
+
+       
+
+    }
+    
+    function showImage(parms) {
+        var base64imageDataStr = parms;
+    	 var bg_image = document.getElementById("bg_image");
+            bg_image.innerHTML = "<image style='width:300px;' src='data:image/png;base64,"+base64imageDataStr+"'>";
+    }
+     
+
+</script>
+</html>
