@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>静态网页</title>
+</head>
+<body>
+	<div>
+		<a href="">点击跳转按钮</a>
+
+<!--        <form id="" action="cany://jsCallOC?username=xiaoming&password=123456" method="get">-->
+        <input id='submitInput' type="submit" name="提交按钮" value="点击提交"><br/>
+        
+        <input id="showInput" type="button" name="弹窗" value="这是个弹窗" onclick="showAlert('hello world!')"><br/>
+        <div style="width: 100px;height: 100px;background: red;" id="square"></div>
+	</div>
+</body>	
+
+<script type="text/javascript" >
+
+	 
+
+	 function showAlert(message){
+          alert(message);
+      return '这是一个alert'+message;
+	 }
+
+  var submitInput = document.getElementById('submitInput'); 
+  submitInput.onclick = function (){
+
+  window.location.href = 'cany://jsCallOC?username=xiaoming&password=123456';
+  };
+
+
+
+
+
+    //OC返回来的数据
+    function callBlockInfo(dict) {
+    	 var name = dict['name'];
+         var age  = dict['age'];
+         alert('OC返回来的数据'+name+age	);
+    }
+
+   
+
+
+
+</script>
+</html>
