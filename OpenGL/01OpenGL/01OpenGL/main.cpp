@@ -22,7 +22,7 @@ GLShaderManager shaderManager;
 //简单的批次容器，是GLTools的一个简单的容器类。
 GLBatch triangleBatch;
 
-GLfloat blockSize = 0.06f;
+GLfloat blockSize = 0.1f;
 
 GLfloat vVerts[] = {
     -blockSize,-blockSize,0.f,
