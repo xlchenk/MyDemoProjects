@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591309FA2278340500DD6712 /* home_banner01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F22278340400DD6712 /* home_banner01@2x.png */; };
+		591309FB2278340500DD6712 /* home_banner03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F32278340400DD6712 /* home_banner03@2x.png */; };
+		591309FC2278340500DD6712 /* home_banner04@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F42278340400DD6712 /* home_banner04@3x.png */; };
+		591309FD2278340500DD6712 /* home_banner02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F52278340500DD6712 /* home_banner02@2x.png */; };
+		591309FE2278340500DD6712 /* home_banner01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F62278340500DD6712 /* home_banner01@3x.png */; };
+		591309FF2278340500DD6712 /* home_banner02@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F72278340500DD6712 /* home_banner02@3x.png */; };
+		59130A002278340500DD6712 /* home_banner04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F82278340500DD6712 /* home_banner04@2x.png */; };
+		59130A012278340500DD6712 /* home_banner03@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 591309F92278340500DD6712 /* home_banner03@3x.png */; };
+		59130A0422784F0F00DD6712 /* CLCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59130A0322784F0F00DD6712 /* CLCycleView.m */; };
 		596C30DA2276F87000C1D756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30D92276F87000C1D756 /* AppDelegate.m */; };
 		596C30DD2276F87000C1D756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30DC2276F87000C1D756 /* ViewController.m */; };
 		596C30E02276F87000C1D756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596C30DE2276F87000C1D756 /* Main.storyboard */; };
@@ -35,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591309F22278340400DD6712 /* home_banner01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner01@2x.png"; sourceTree = "<group>"; };
+		591309F32278340400DD6712 /* home_banner03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner03@2x.png"; sourceTree = "<group>"; };
+		591309F42278340400DD6712 /* home_banner04@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner04@3x.png"; sourceTree = "<group>"; };
+		591309F52278340500DD6712 /* home_banner02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner02@2x.png"; sourceTree = "<group>"; };
+		591309F62278340500DD6712 /* home_banner01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner01@3x.png"; sourceTree = "<group>"; };
+		591309F72278340500DD6712 /* home_banner02@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner02@3x.png"; sourceTree = "<group>"; };
+		591309F82278340500DD6712 /* home_banner04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner04@2x.png"; sourceTree = "<group>"; };
+		591309F92278340500DD6712 /* home_banner03@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_banner03@3x.png"; sourceTree = "<group>"; };
+		59130A0222784F0F00DD6712 /* CLCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLCycleView.h; sourceTree = "<group>"; };
+		59130A0322784F0F00DD6712 /* CLCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLCycleView.m; sourceTree = "<group>"; };
 		596C30D52276F87000C1D756 /* 轮播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "轮播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596C30D82276F87000C1D756 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		596C30D92276F87000C1D756 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,10 +120,20 @@
 		596C30D72276F87000C1D756 /* 轮播 */ = {
 			isa = PBXGroup;
 			children = (
+				591309F22278340400DD6712 /* home_banner01@2x.png */,
+				591309F62278340500DD6712 /* home_banner01@3x.png */,
+				591309F52278340500DD6712 /* home_banner02@2x.png */,
+				591309F72278340500DD6712 /* home_banner02@3x.png */,
+				591309F32278340400DD6712 /* home_banner03@2x.png */,
+				591309F92278340500DD6712 /* home_banner03@3x.png */,
+				591309F82278340500DD6712 /* home_banner04@2x.png */,
+				591309F42278340400DD6712 /* home_banner04@3x.png */,
 				596C30D82276F87000C1D756 /* AppDelegate.h */,
 				596C30D92276F87000C1D756 /* AppDelegate.m */,
 				596C30DB2276F87000C1D756 /* ViewController.h */,
 				596C30DC2276F87000C1D756 /* ViewController.m */,
+				59130A0222784F0F00DD6712 /* CLCycleView.h */,
+				59130A0322784F0F00DD6712 /* CLCycleView.m */,
 				596C30DE2276F87000C1D756 /* Main.storyboard */,
 				596C30E12276F87100C1D756 /* Assets.xcassets */,
 				596C30E32276F87100C1D756 /* LaunchScreen.storyboard */,
@@ -235,8 +264,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591309FC2278340500DD6712 /* home_banner04@3x.png in Resources */,
+				591309FE2278340500DD6712 /* home_banner01@3x.png in Resources */,
+				591309FA2278340500DD6712 /* home_banner01@2x.png in Resources */,
 				596C30E52276F87100C1D756 /* LaunchScreen.storyboard in Resources */,
 				596C30E22276F87100C1D756 /* Assets.xcassets in Resources */,
+				591309FF2278340500DD6712 /* home_banner02@3x.png in Resources */,
+				591309FB2278340500DD6712 /* home_banner03@2x.png in Resources */,
+				59130A012278340500DD6712 /* home_banner03@3x.png in Resources */,
+				59130A002278340500DD6712 /* home_banner04@2x.png in Resources */,
+				591309FD2278340500DD6712 /* home_banner02@2x.png in Resources */,
 				596C30E02276F87000C1D756 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +301,7 @@
 			files = (
 				596C30DD2276F87000C1D756 /* ViewController.m in Sources */,
 				596C30E82276F87100C1D756 /* main.m in Sources */,
+				59130A0422784F0F00DD6712 /* CLCycleView.m in Sources */,
 				596C30DA2276F87000C1D756 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
