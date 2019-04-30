@@ -30,6 +30,10 @@ GLfloat vVerts[] = {
     blockSize,blockSize,0.0f,
     -blockSize,blockSize,0.0f
 };
+
+GLfloat xPos = 0.0f;
+GLfloat yPos = 0.0f;
+
 /*
  在窗口大小改变时，接收新的宽度&高度。
  */
@@ -51,9 +55,18 @@ void RenderScene(void)
     triangleBatch.Draw();
     glutSwapBuffers();
 }
-
+//重绘
 void SpeacialKeys(int key,int x,int y)
 {
+    GLfloat stepSize = 0.025f;
+    
+    
+    
+    
+    
+    
+    
+    /*
     //D点位
     GLfloat stepSize = 0.025f;
     GLfloat blockX = vVerts[0];
@@ -72,6 +85,24 @@ void SpeacialKeys(int key,int x,int y)
         blockX+=stepSize;
     }
     
+    //边界检测
+//左边
+    if (blockX<-1.0f) {
+        blockX = -1.0f;
+    }
+    //右边
+    if (blockX>1.0f - blockSize*2) {
+        blockX = 1.0f-blockSize*2;
+    }
+    //上边界
+    if (blockY>1.0f) {
+        blockY = 1.0f;
+    }
+//    下边
+    if (blockY<-1.0f +blockSize*2) {
+        blockY = -1.0f+blockSize*2;
+    }
+    
 //    A点
     vVerts[0] = blockX;
     vVerts[1] = blockY-blockSize*2;
@@ -88,6 +119,11 @@ void SpeacialKeys(int key,int x,int y)
     triangleBatch.CopyVertexData3f(vVerts);
     triangleBatch.Draw();
     glutPostRedisplay();
+     */
+    
+    
+    
+    
 }
 
 void setupRC()

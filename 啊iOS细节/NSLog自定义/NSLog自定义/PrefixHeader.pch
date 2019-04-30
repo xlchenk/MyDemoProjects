@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  NSLog自定义
+//
+//  Created by chenxl on 2019/4/29.
+//  Copyright © 2019 chenxl. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+//#define NSLog(...)  NSLog(__VA_ARGS__)
+
+
+//#define NSLog(FORMAT, ...) fprintf(stderr, "%s:%zd\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+
+#define NSLog(fmt,...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__)
+
+#endif /* PrefixHeader_pch */
