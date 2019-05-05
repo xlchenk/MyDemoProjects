@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CLCycleView.h"
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 @interface ViewController ()
 @end
@@ -17,6 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+    
+    
+    
+    CLCycleView * cycle = [[CLCycleView alloc]initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 200)];
+//    cycle.backgroundColor = [UIColor redColor];
+//    
+    cycle.imageArray = @[@"home_banner01",@"home_banner02",@"home_banner03",@"home_banner04"];
+    [self.view addSubview:cycle];
     
  
 }
