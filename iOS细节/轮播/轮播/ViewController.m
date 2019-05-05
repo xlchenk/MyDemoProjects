@@ -29,7 +29,7 @@
     cycle.imageArray = @[@"home_banner01",@"home_banner02",@"home_banner03",@"home_banner04"];
     [self.view addSubview:cycle];
     
- 
+     
 }
 
 

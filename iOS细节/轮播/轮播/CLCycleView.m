@@ -9,6 +9,7 @@
 #import "CLCycleView.h"
 #import "CLCycleViewCell.h"
 #import "CLCycleFlowLayout.h"
+#import "AppDelegate.h"
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define cellIdentifier @"cellIdentifier"
@@ -36,10 +37,7 @@
         
         
         self.backgroundColor = [UIColor redColor];
-//        _pageControl = [[UIView alloc]initWithFrame:CGRectMake(80, 60, 100, 60)];
-//        _pageControl.backgroundColor = [UIColor greenColor];
-//        UIWindow *window = [UIApplication sharedApplication].keyWindow ;
-//        [window addSubview:_pageControl];
+       
     }
     
     return self;
@@ -50,7 +48,11 @@
     
     
    
-    
+    _pageControl = [[UIView alloc]initWithFrame:CGRectMake(80, 60, 100, 60)];
+    _pageControl.backgroundColor = [UIColor greenColor];
+//    UIWindow *window = A;
+    window.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    [window addSubview:_pageControl];
 }
 
 
