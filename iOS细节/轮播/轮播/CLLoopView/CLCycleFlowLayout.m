@@ -11,7 +11,8 @@
 @implementation CLCycleFlowLayout
 - (void)prepareLayout{
     [super prepareLayout];
-    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width, 10);
+//    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width, 10);
+    self.itemSize = self.collectionView.bounds.size;
     self.minimumLineSpacing = 0;
     self.minimumInteritemSpacing = 0;
     

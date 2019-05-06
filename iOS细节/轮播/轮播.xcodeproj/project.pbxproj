@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59130A0422784F0F00DD6712 /* CLCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59130A0322784F0F00DD6712 /* CLCycleView.m */; };
 		591647A0227EBDF5000A001C /* CLCycleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5916479F227EBDF5000A001C /* CLCycleViewCell.m */; };
+		59276FF5227FD245000E6DC7 /* CLLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59276FF4227FD245000E6DC7 /* CLLoopView.m */; };
 		596C30DA2276F87000C1D756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30D92276F87000C1D756 /* AppDelegate.m */; };
 		596C30DD2276F87000C1D756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30DC2276F87000C1D756 /* ViewController.m */; };
 		596C30E02276F87000C1D756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596C30DE2276F87000C1D756 /* Main.storyboard */; };
@@ -18,6 +18,8 @@
 		596C30F22276F87200C1D756 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30F12276F87200C1D756 /* __Tests.m */; };
 		596C30FD2276F87200C1D756 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C30FC2276F87200C1D756 /* __UITests.m */; };
 		5981B74D227EC444005BE987 /* CLCycleFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5981B74C227EC444005BE987 /* CLCycleFlowLayout.m */; };
+		59EF77C9228019D300B6AC27 /* CLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EF77C8228019D300B6AC27 /* CLTimer.m */; };
+		59EF77CC22802B7B00B6AC27 /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EF77CB22802B7B00B6AC27 /* SecondController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		59130A0222784F0F00DD6712 /* CLCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLCycleView.h; sourceTree = "<group>"; };
-		59130A0322784F0F00DD6712 /* CLCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLCycleView.m; sourceTree = "<group>"; };
 		5916479E227EBDF5000A001C /* CLCycleViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLCycleViewCell.h; sourceTree = "<group>"; };
 		5916479F227EBDF5000A001C /* CLCycleViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLCycleViewCell.m; sourceTree = "<group>"; };
+		59276FF3227FD245000E6DC7 /* CLLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLLoopView.h; sourceTree = "<group>"; };
+		59276FF4227FD245000E6DC7 /* CLLoopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLLoopView.m; sourceTree = "<group>"; };
 		596C30D52276F87000C1D756 /* 轮播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "轮播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		596C30D82276F87000C1D756 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		596C30D92276F87000C1D756 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +62,10 @@
 		596C30FE2276F87200C1D756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5981B74B227EC444005BE987 /* CLCycleFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLCycleFlowLayout.h; sourceTree = "<group>"; };
 		5981B74C227EC444005BE987 /* CLCycleFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLCycleFlowLayout.m; sourceTree = "<group>"; };
+		59EF77C7228019D300B6AC27 /* CLTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLTimer.h; sourceTree = "<group>"; };
+		59EF77C8228019D300B6AC27 /* CLTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLTimer.m; sourceTree = "<group>"; };
+		59EF77CA22802B7B00B6AC27 /* SecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
+		59EF77CB22802B7B00B6AC27 /* SecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59276FF2227FD1ED000E6DC7 /* CLLoopView */ = {
+			isa = PBXGroup;
+			children = (
+				59276FF3227FD245000E6DC7 /* CLLoopView.h */,
+				59276FF4227FD245000E6DC7 /* CLLoopView.m */,
+				5916479E227EBDF5000A001C /* CLCycleViewCell.h */,
+				5916479F227EBDF5000A001C /* CLCycleViewCell.m */,
+				5981B74B227EC444005BE987 /* CLCycleFlowLayout.h */,
+				5981B74C227EC444005BE987 /* CLCycleFlowLayout.m */,
+				59EF77C7228019D300B6AC27 /* CLTimer.h */,
+				59EF77C8228019D300B6AC27 /* CLTimer.m */,
+			);
+			path = CLLoopView;
+			sourceTree = "<group>";
+		};
 		596C30CC2276F87000C1D756 = {
 			isa = PBXGroup;
 			children = (
@@ -110,16 +131,13 @@
 		596C30D72276F87000C1D756 /* 轮播 */ = {
 			isa = PBXGroup;
 			children = (
+				59276FF2227FD1ED000E6DC7 /* CLLoopView */,
 				596C30D82276F87000C1D756 /* AppDelegate.h */,
 				596C30D92276F87000C1D756 /* AppDelegate.m */,
 				596C30DB2276F87000C1D756 /* ViewController.h */,
 				596C30DC2276F87000C1D756 /* ViewController.m */,
-				59130A0222784F0F00DD6712 /* CLCycleView.h */,
-				59130A0322784F0F00DD6712 /* CLCycleView.m */,
-				5916479E227EBDF5000A001C /* CLCycleViewCell.h */,
-				5916479F227EBDF5000A001C /* CLCycleViewCell.m */,
-				5981B74B227EC444005BE987 /* CLCycleFlowLayout.h */,
-				5981B74C227EC444005BE987 /* CLCycleFlowLayout.m */,
+				59EF77CA22802B7B00B6AC27 /* SecondController.h */,
+				59EF77CB22802B7B00B6AC27 /* SecondController.m */,
 				596C30DE2276F87000C1D756 /* Main.storyboard */,
 				596C30E12276F87100C1D756 /* Assets.xcassets */,
 				596C30E32276F87100C1D756 /* LaunchScreen.storyboard */,
@@ -279,9 +297,11 @@
 			files = (
 				596C30DD2276F87000C1D756 /* ViewController.m in Sources */,
 				596C30E82276F87100C1D756 /* main.m in Sources */,
-				59130A0422784F0F00DD6712 /* CLCycleView.m in Sources */,
 				5981B74D227EC444005BE987 /* CLCycleFlowLayout.m in Sources */,
+				59276FF5227FD245000E6DC7 /* CLLoopView.m in Sources */,
 				591647A0227EBDF5000A001C /* CLCycleViewCell.m in Sources */,
+				59EF77CC22802B7B00B6AC27 /* SecondController.m in Sources */,
+				59EF77C9228019D300B6AC27 /* CLTimer.m in Sources */,
 				596C30DA2276F87000C1D756 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

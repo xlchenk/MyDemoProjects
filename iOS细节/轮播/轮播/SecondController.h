@@ -1,8 +1,8 @@
 //
-//  CLCycleView.h
+//  SecondController.h
 //  轮播
 //
-//  Created by chenxl on 2019/4/30.
+//  Created by chenxl on 2019/5/6.
 //  Copyright © 2019 chenxl. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CLCycleView : UICollectionView
-@property(nonatomic,strong) NSArray *imageArray;
+@interface SecondController : UIViewController
+
 @end
 
 NS_ASSUME_NONNULL_END
