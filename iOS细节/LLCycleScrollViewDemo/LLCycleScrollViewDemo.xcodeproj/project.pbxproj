@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		590E2D98228135940006C29A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2D97228135940006C29A /* AppDelegate.m */; };
+		590E2D9B228135940006C29A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2D9A228135940006C29A /* ViewController.m */; };
+		590E2D9E228135940006C29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590E2D9C228135940006C29A /* Main.storyboard */; };
+		590E2DA0228135950006C29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 590E2D9F228135950006C29A /* Assets.xcassets */; };
+		590E2DA3228135950006C29A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590E2DA1228135950006C29A /* LaunchScreen.storyboard */; };
+		590E2DA6228135950006C29A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2DA5228135950006C29A /* main.m */; };
+		590E2DB0228135950006C29A /* LLCycleScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2DAF228135950006C29A /* LLCycleScrollViewDemoTests.m */; };
+		590E2DBB228135950006C29A /* LLCycleScrollViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2DBA228135950006C29A /* LLCycleScrollViewDemoUITests.m */; };
+		590E2DCB228135CB0006C29A /* LLCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2DCA228135CB0006C29A /* LLCycleScrollView.m */; };
+		590E2DCE2281878A0006C29A /* LLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 590E2DCC2281878A0006C29A /* LLTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		590E2DAC228135950006C29A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 590E2D8B228135940006C29A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 590E2D92228135940006C29A;
+			remoteInfo = LLCycleScrollViewDemo;
+		};
+		590E2DB7228135950006C29A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 590E2D8B228135940006C29A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 590E2D92228135940006C29A;
+			remoteInfo = LLCycleScrollViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		590E2D93228135940006C29A /* LLCycleScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLCycleScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		590E2D96228135940006C29A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		590E2D97228135940006C29A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		590E2D99228135940006C29A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		590E2D9A228135940006C29A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		590E2D9D228135940006C29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		590E2D9F228135950006C29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		590E2DA2228135950006C29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		590E2DA4228135950006C29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590E2DA5228135950006C29A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		590E2DAB228135950006C29A /* LLCycleScrollViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLCycleScrollViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		590E2DAF228135950006C29A /* LLCycleScrollViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCycleScrollViewDemoTests.m; sourceTree = "<group>"; };
+		590E2DB1228135950006C29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590E2DB6228135950006C29A /* LLCycleScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLCycleScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		590E2DBA228135950006C29A /* LLCycleScrollViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCycleScrollViewDemoUITests.m; sourceTree = "<group>"; };
+		590E2DBC228135950006C29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590E2DC9228135CB0006C29A /* LLCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCycleScrollView.h; sourceTree = "<group>"; };
+		590E2DCA228135CB0006C29A /* LLCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCycleScrollView.m; sourceTree = "<group>"; };
+		590E2DCC2281878A0006C29A /* LLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLTimer.m; path = ../../../LLCycleViewDemo/LLCycleViewDemo/LLCycleView/LLTimer.m; sourceTree = "<group>"; };
+		590E2DCD2281878A0006C29A /* LLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLTimer.h; path = ../../../LLCycleViewDemo/LLCycleViewDemo/LLCycleView/LLTimer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		590E2D90228135940006C29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DA8228135950006C29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DB3228135950006C29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		590E2D8A228135940006C29A = {
+			isa = PBXGroup;
+			children = (
+				590E2D95228135940006C29A /* LLCycleScrollViewDemo */,
+				590E2DAE228135950006C29A /* LLCycleScrollViewDemoTests */,
+				590E2DB9228135950006C29A /* LLCycleScrollViewDemoUITests */,
+				590E2D94228135940006C29A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		590E2D94228135940006C29A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				590E2D93228135940006C29A /* LLCycleScrollViewDemo.app */,
+				590E2DAB228135950006C29A /* LLCycleScrollViewDemoTests.xctest */,
+				590E2DB6228135950006C29A /* LLCycleScrollViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		590E2D95228135940006C29A /* LLCycleScrollViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				590E2DC8228135A80006C29A /* LLCycleScrollView */,
+				590E2D96228135940006C29A /* AppDelegate.h */,
+				590E2D97228135940006C29A /* AppDelegate.m */,
+				590E2D99228135940006C29A /* ViewController.h */,
+				590E2D9A228135940006C29A /* ViewController.m */,
+				590E2D9C228135940006C29A /* Main.storyboard */,
+				590E2D9F228135950006C29A /* Assets.xcassets */,
+				590E2DA1228135950006C29A /* LaunchScreen.storyboard */,
+				590E2DA4228135950006C29A /* Info.plist */,
+				590E2DA5228135950006C29A /* main.m */,
+			);
+			path = LLCycleScrollViewDemo;
+			sourceTree = "<group>";
+		};
+		590E2DAE228135950006C29A /* LLCycleScrollViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				590E2DAF228135950006C29A /* LLCycleScrollViewDemoTests.m */,
+				590E2DB1228135950006C29A /* Info.plist */,
+			);
+			path = LLCycleScrollViewDemoTests;
+			sourceTree = "<group>";
+		};
+		590E2DB9228135950006C29A /* LLCycleScrollViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				590E2DBA228135950006C29A /* LLCycleScrollViewDemoUITests.m */,
+				590E2DBC228135950006C29A /* Info.plist */,
+			);
+			path = LLCycleScrollViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		590E2DC8228135A80006C29A /* LLCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				590E2DC9228135CB0006C29A /* LLCycleScrollView.h */,
+				590E2DCA228135CB0006C29A /* LLCycleScrollView.m */,
+				590E2DCD2281878A0006C29A /* LLTimer.h */,
+				590E2DCC2281878A0006C29A /* LLTimer.m */,
+			);
+			path = LLCycleScrollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		590E2D92228135940006C29A /* LLCycleScrollViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590E2DBF228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemo" */;
+			buildPhases = (
+				590E2D8F228135940006C29A /* Sources */,
+				590E2D90228135940006C29A /* Frameworks */,
+				590E2D91228135940006C29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLCycleScrollViewDemo;
+			productName = LLCycleScrollViewDemo;
+			productReference = 590E2D93228135940006C29A /* LLCycleScrollViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		590E2DAA228135950006C29A /* LLCycleScrollViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590E2DC2228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemoTests" */;
+			buildPhases = (
+				590E2DA7228135950006C29A /* Sources */,
+				590E2DA8228135950006C29A /* Frameworks */,
+				590E2DA9228135950006C29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				590E2DAD228135950006C29A /* PBXTargetDependency */,
+			);
+			name = LLCycleScrollViewDemoTests;
+			productName = LLCycleScrollViewDemoTests;
+			productReference = 590E2DAB228135950006C29A /* LLCycleScrollViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		590E2DB5228135950006C29A /* LLCycleScrollViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590E2DC5228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemoUITests" */;
+			buildPhases = (
+				590E2DB2228135950006C29A /* Sources */,
+				590E2DB3228135950006C29A /* Frameworks */,
+				590E2DB4228135950006C29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				590E2DB8228135950006C29A /* PBXTargetDependency */,
+			);
+			name = LLCycleScrollViewDemoUITests;
+			productName = LLCycleScrollViewDemoUITests;
+			productReference = 590E2DB6228135950006C29A /* LLCycleScrollViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		590E2D8B228135940006C29A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = chenxl;
+				TargetAttributes = {
+					590E2D92228135940006C29A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					590E2DAA228135950006C29A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 590E2D92228135940006C29A;
+					};
+					590E2DB5228135950006C29A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 590E2D92228135940006C29A;
+					};
+				};
+			};
+			buildConfigurationList = 590E2D8E228135940006C29A /* Build configuration list for PBXProject "LLCycleScrollViewDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 590E2D8A228135940006C29A;
+			productRefGroup = 590E2D94228135940006C29A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				590E2D92228135940006C29A /* LLCycleScrollViewDemo */,
+				590E2DAA228135950006C29A /* LLCycleScrollViewDemoTests */,
+				590E2DB5228135950006C29A /* LLCycleScrollViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		590E2D91228135940006C29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590E2DA3228135950006C29A /* LaunchScreen.storyboard in Resources */,
+				590E2DA0228135950006C29A /* Assets.xcassets in Resources */,
+				590E2D9E228135940006C29A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DA9228135950006C29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DB4228135950006C29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		590E2D8F228135940006C29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590E2DCE2281878A0006C29A /* LLTimer.m in Sources */,
+				590E2DCB228135CB0006C29A /* LLCycleScrollView.m in Sources */,
+				590E2D9B228135940006C29A /* ViewController.m in Sources */,
+				590E2DA6228135950006C29A /* main.m in Sources */,
+				590E2D98228135940006C29A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DA7228135950006C29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590E2DB0228135950006C29A /* LLCycleScrollViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		590E2DB2228135950006C29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590E2DBB228135950006C29A /* LLCycleScrollViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		590E2DAD228135950006C29A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 590E2D92228135940006C29A /* LLCycleScrollViewDemo */;
+			targetProxy = 590E2DAC228135950006C29A /* PBXContainerItemProxy */;
+		};
+		590E2DB8228135950006C29A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 590E2D92228135940006C29A /* LLCycleScrollViewDemo */;
+			targetProxy = 590E2DB7228135950006C29A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		590E2D9C228135940006C29A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				590E2D9D228135940006C29A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		590E2DA1228135950006C29A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				590E2DA2228135950006C29A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		590E2DBD228135950006C29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		590E2DBE228135950006C29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		590E2DC0228135950006C29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		590E2DC1228135950006C29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		590E2DC3228135950006C29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLCycleScrollViewDemo.app/LLCycleScrollViewDemo";
+			};
+			name = Debug;
+		};
+		590E2DC4228135950006C29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLCycleScrollViewDemo.app/LLCycleScrollViewDemo";
+			};
+			name = Release;
+		};
+		590E2DC6228135950006C29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLCycleScrollViewDemo;
+			};
+			name = Debug;
+		};
+		590E2DC7228135950006C29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFV2AUFUFC;
+				INFOPLIST_FILE = LLCycleScrollViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.canyanwang.LLCycleScrollViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLCycleScrollViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		590E2D8E228135940006C29A /* Build configuration list for PBXProject "LLCycleScrollViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590E2DBD228135950006C29A /* Debug */,
+				590E2DBE228135950006C29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		590E2DBF228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590E2DC0228135950006C29A /* Debug */,
+				590E2DC1228135950006C29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		590E2DC2228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590E2DC3228135950006C29A /* Debug */,
+				590E2DC4228135950006C29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		590E2DC5228135950006C29A /* Build configuration list for PBXNativeTarget "LLCycleScrollViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590E2DC6228135950006C29A /* Debug */,
+				590E2DC7228135950006C29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 590E2D8B228135940006C29A /* Project object */;
+}

@@ -33,7 +33,6 @@ UICollectionViewDelegateFlowLayout
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:self.collectionView];
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self->_imageArray.count == 1) {
                 return ;
@@ -48,9 +47,6 @@ UICollectionViewDelegateFlowLayout
         _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
         
         _currentIndex = 0;
-        
-        
-        
     }
     return self;
 }
@@ -73,15 +69,11 @@ UICollectionViewDelegateFlowLayout
 }
 - (void)setupTimer{
     self.clTimer = [[LLTimer alloc]initWithTimerInterval:2 target:self selector:@selector(fire)];
-    
 }
 - (void)fire{
     NSLog(@"dfdfs");
-    
-    
     [self autoScroll];
 }
-
 #pragma mark --注意这个方法will添加的时候走一次，要被销毁的时候也要走一次
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
@@ -160,7 +152,7 @@ UICollectionViewDelegateFlowLayout
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.clTimer stop];
 }
-#pragma mark -- 拖拽停止NSTimer
+#pragma mark -- 拖拽停止
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSInteger page = scrollView.contentOffset.x/K_WIDTH;
     NSInteger pageIndex = page%_imageArray.count;
