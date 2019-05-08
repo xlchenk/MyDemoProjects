@@ -23,6 +23,9 @@
     LLCycleScrollView * scroll = [[LLCycleScrollView alloc]initWithFrame:CGRectMake(0, 100,SCREEN_WHDTH , 200)];
     scroll.imageArray =@[@"banner01",@"banner02",@"banner03",@"banner04"];
     scroll.backgroundColor = [UIColor redColor];
+    scroll.bannerClickCallBack = ^(NSInteger index) {
+        NSLog(@"%ld",index);
+    };
     [self.view addSubview:scroll];
     
 }
