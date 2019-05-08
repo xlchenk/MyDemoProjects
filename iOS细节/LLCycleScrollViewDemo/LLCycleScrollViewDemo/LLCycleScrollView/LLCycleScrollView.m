@@ -42,14 +42,14 @@
 }
 - (void)setImageArray:(NSArray *)imageArray{
     _imageArray = imageArray;
-    self.scrollView.contentOffset = CGPointMake(K_WIDTH,0);
-    self.scrollView.contentSize = CGSizeMake(K_WIDTH*(_imageArray.count+2), 0);
+    self.scrollView.contentOffset = CGPointMake(_imageArray.count==1?0:K_WIDTH,0);
+    self.scrollView.contentSize = CGSizeMake(K_WIDTH*(imageArray.count==1?0:(_imageArray.count+2)), 0);
+   
     [_imageSources addObjectsFromArray:_imageArray];
-    
-    [_imageSources insertObject:_imageArray.lastObject atIndex:0];
-    [_imageSources insertObject:_imageArray.firstObject atIndex:_imageArray.count+1];
-    
-    
+    if (_imageSources.count > 1) {
+        [_imageSources insertObject:_imageArray.lastObject atIndex:0];
+        [_imageSources insertObject:_imageArray.firstObject atIndex:_imageArray.count+1];
+    }
     [_imageSources enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(idx*K_WIDTH, 0, K_WIDTH, self.scrollView.bounds.size.height)];
         imageView.image = [UIImage imageNamed:obj];
@@ -59,7 +59,7 @@
         
         [imageView addGestureRecognizer:tap];
     }];
-    [self setupTimer];
+     [self setupTimer];
      [self setupPageControl:_imageArray.count];
 }
 - (void)setupPageControl:(NSInteger)pageCount{
@@ -68,6 +68,7 @@
     [self addSubview:self.pageControl];
 }
 - (void)setupTimer{
+    if (_imageArray.count==1) return;
     self.clTimer = [[LLTimer alloc]initWithTimerInterval:2 target:self selector:@selector(fire)];
 }
 - (void)fire{
