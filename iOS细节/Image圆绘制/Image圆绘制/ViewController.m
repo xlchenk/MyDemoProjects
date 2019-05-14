@@ -20,9 +20,7 @@
     UIImageView * iv = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
     [self.view addSubview:iv];
     UIImage * image = [UIImage imageNamed:@"header"];
-//    iv.image = [image XL_cornerRadiusWithSize:iv.bounds.size fillColor:[UIColor whiteColor] completion:^(UIImage * _Nonnull) {
-//        
-//    }];
+ 
     [image XL_cornerRadiusWithSize:iv.bounds.size fillColor:[UIColor whiteColor] completion:^(UIImage * image) {
         iv.image = image;
     }];
