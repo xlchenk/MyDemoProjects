@@ -15,6 +15,9 @@
 		591650FA22890B83009ECABC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591650F922890B83009ECABC /* main.m */; };
 		5916510422890B83009ECABC /* ScrollPageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5916510322890B83009ECABC /* ScrollPageDemoTests.m */; };
 		5916510F22890B83009ECABC /* ScrollPageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5916510E22890B83009ECABC /* ScrollPageDemoUITests.m */; };
+		596DC9D2228BB08B004542EB /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596DC9D0228BB08B004542EB /* SecondController.m */; };
+		596DC9D3228BB08B004542EB /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596DC9D1228BB08B004542EB /* SecondController.xib */; };
+		59A01F2E228BBE0100AD561E /* XLSocollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A01F2D228BBE0100AD561E /* XLSocollPageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		5916510A22890B83009ECABC /* ScrollPageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollPageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5916510E22890B83009ECABC /* ScrollPageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollPageDemoUITests.m; sourceTree = "<group>"; };
 		5916511022890B83009ECABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		596DC9CF228BB08B004542EB /* SecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
+		596DC9D0228BB08B004542EB /* SecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
+		596DC9D1228BB08B004542EB /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
+		59A01F2C228BBE0100AD561E /* XLSocollPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLSocollPageView.h; sourceTree = "<group>"; };
+		59A01F2D228BBE0100AD561E /* XLSocollPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLSocollPageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,11 @@
 				591650EB22890B81009ECABC /* AppDelegate.m */,
 				591650ED22890B81009ECABC /* ViewController.h */,
 				591650EE22890B81009ECABC /* ViewController.m */,
+				59A01F2C228BBE0100AD561E /* XLSocollPageView.h */,
+				59A01F2D228BBE0100AD561E /* XLSocollPageView.m */,
+				596DC9CF228BB08B004542EB /* SecondController.h */,
+				596DC9D0228BB08B004542EB /* SecondController.m */,
+				596DC9D1228BB08B004542EB /* SecondController.xib */,
 				591650F022890B81009ECABC /* Main.storyboard */,
 				591650F322890B83009ECABC /* Assets.xcassets */,
 				591650F522890B83009ECABC /* LaunchScreen.storyboard */,
@@ -236,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				591650F722890B83009ECABC /* LaunchScreen.storyboard in Resources */,
+				596DC9D3228BB08B004542EB /* SecondController.xib in Resources */,
 				591650F422890B83009ECABC /* Assets.xcassets in Resources */,
 				591650F222890B81009ECABC /* Main.storyboard in Resources */,
 			);
@@ -263,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				591650EF22890B81009ECABC /* ViewController.m in Sources */,
+				59A01F2E228BBE0100AD561E /* XLSocollPageView.m in Sources */,
+				596DC9D2228BB08B004542EB /* SecondController.m in Sources */,
 				591650FA22890B83009ECABC /* main.m in Sources */,
 				591650EC22890B81009ECABC /* AppDelegate.m in Sources */,
 			);
