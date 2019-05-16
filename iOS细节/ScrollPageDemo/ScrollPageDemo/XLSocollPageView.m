@@ -78,7 +78,7 @@
         btn.frame = CGRectMake(btnX+(btnMarginX), btnY, btnW, btnH);
         [btn setTitle:[self.childVCs[i] title] forState:UIControlStateNormal];
         btn.tag = i;
-        btn.backgroundColor =  [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:arc4random_uniform(256)/255.0];
+//        btn.backgroundColor =  [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:arc4random_uniform(256)/255.0];
  
         btn.titleLabel.font = _segementStyle.titleFont;
         [btn setTitleColor:_segementStyle.normalTitleColor forState:UIControlStateNormal];
@@ -117,7 +117,7 @@
     
     NSAttributedString *muStr = [[NSAttributedString alloc]initWithString:[self.childVCs[index] title] attributes:@{NSFontAttributeName:_segementStyle.titleFont, NSParagraphStyleAttributeName:paragraphStyle}];
     CGSize size =  [muStr boundingRectWithSize:CGSizeMake(MAXFLOAT, _segementStyle.segmentHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
-    NSLog(@" size =  %@", NSStringFromCGSize(size));
+ 
    CGFloat width = ceil(size.width)+marginW;
     return width;
 }
@@ -169,20 +169,20 @@
     for (UIButton *button in self.segementView.subviews) {
         if (button != btn) [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
-//    if (_segementStyle.showLine) {
-//        
-//        CGRect frame = self.bottomLine.frame;
-//        
-//        CGFloat bottomLineX = (index==0?0:[self.arrTitleX[index-1] floatValue])+btnMarginX;
-//        
-//        
-//        frame.origin.x = bottomLineX;
-//        
-//        frame.size.width = [self.titleWidthArr[index] floatValue];
-//        
-//        self.bottomLine.frame = frame;
-//
-//    }
+    if (_segementStyle.showLine) {
+        
+        CGRect frame = self.bottomLine.frame;
+        
+        CGFloat bottomLineX = (index==0?0:[self.arrTitleX[index-1] floatValue])+btnMarginX;
+        
+        
+        frame.origin.x = bottomLineX;
+        
+        frame.size.width = [self.titleWidthArr[index] floatValue];
+        
+        self.bottomLine.frame = frame;
+
+    }
     
     UIViewController *vc = self.childVCs[index];
     if ([vc isViewLoaded]) {
@@ -213,19 +213,19 @@
     //    rigitLb.textColor = RgbColor(0.4+0.6*rightScale, 0.6-0.6*rightScale, 0.7-0.7*rightScale, 1);
     [leftBtn setTitleColor:RgbColor(leftScale, 0, 0, 1) forState:UIControlStateNormal];
     [rightBtn setTitleColor:RgbColor(rightScale, 0, 0, 1) forState:UIControlStateNormal];
-    NSLog(@"%f---%f",leftScale,rightScale);
+//    NSLog(@"%f---%f",leftScale,rightScale);
    
     
-    CGRect frame = self.bottomLine.frame;
-    CGFloat oldLineW = frame.size.width;
-    CGFloat bottomLineX = (leftIndex==0?0:[self.arrTitleX[leftIndex-1] floatValue])+btnMarginX;
-    
-    
-    frame.origin.x = bottomLineX;
-
-    frame.size.width = [self.titleWidthArr[leftIndex] floatValue];
-
-    self.bottomLine.frame = frame;
+//    CGRect frame = self.bottomLine.frame;
+//    CGFloat oldLineW = frame.size.width;
+//    CGFloat bottomLineX = (leftIndex==0?0:[self.arrTitleX[leftIndex-1] floatValue])+btnMarginX;
+//
+//
+//    frame.origin.x = bottomLineX;
+//
+//    frame.size.width = [self.titleWidthArr[leftIndex] floatValue];
+//
+//    self.bottomLine.frame = frame;
 
 }
 
