@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XLSegmentStyle.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XLSocollPageView : UIView
-@property(nonatomic,assign) NSInteger segmentHeight;
+
 @property(nonatomic,strong) UIColor *headerBackGroundColor;
 
 - (instancetype)initWithFrame:(CGRect)frame
                        titles:(NSArray<NSString *> *)titles
+               segementStyle:(XLSegmentStyle *)segementStyle
                      childVCs:(NSArray<UIViewController *>*)childVCs
          parentViewController:(UIViewController *)parentViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END
