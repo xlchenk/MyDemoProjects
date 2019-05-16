@@ -19,7 +19,7 @@
         _selectedTitleColor = [UIColor redColor];
         _normalTitleColor = [UIColor blackColor];
         _scrollLineColor = [UIColor redColor];
-        _scrollLineHeight = 1.f;
+        _scrollLineHeight = 2.f;
     }
     return self;
 }

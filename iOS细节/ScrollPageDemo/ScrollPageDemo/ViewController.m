@@ -38,13 +38,13 @@
         }
     XLSegmentStyle * style = [[XLSegmentStyle alloc]init];
     style.showLine = YES;
-    style.scrollLineColor = [UIColor blueColor];
+     
     style.segmentHeight = 44;
     XLSocollPageView *pageView = [[XLSocollPageView alloc]initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) titles:titles segementStyle:style childVCs:vcArray parentViewController:self];
    
     
     //头部背景颜色
-    pageView.headerBackGroundColor = [UIColor cyanColor];
+    pageView.headerBackGroundColor = [UIColor whiteColor];
     
     [self.view addSubview:pageView];
 }

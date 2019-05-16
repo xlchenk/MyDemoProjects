@@ -10,7 +10,9 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGTH [UIScreen mainScreen].bounds.size.height
 #define RgbColor(r,g,b,a) [UIColor colorWithRed:(r) green:(g) blue:(b) alpha:a]
+
 #define marginW 20;
+#define btnMarginX 5
 @interface XLSocollPageView ()<UIScrollViewDelegate>
 @property (strong, nonatomic) NSArray *titlesArray;
 @property (weak, nonatomic) UIViewController *parentViewController;
@@ -18,7 +20,9 @@
 @property(nonatomic,strong) UIScrollView *segementView;
 @property(nonatomic,strong) UIScrollView *contentScrollView;
 @property(nonatomic,strong) CALayer *bottomLine;
+
 @property(nonatomic,strong) NSMutableArray *titleWidthArr;
+@property(nonatomic,strong) NSMutableArray *arrTitleX;
 
 @end
 @implementation XLSocollPageView{
@@ -61,32 +65,21 @@
     CGFloat titlesWidth = 0;
     
     for (NSInteger i =0; i<self.childVCs.count; i++) {
-       
-    
-//        NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-//        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-//        paragraphStyle.alignment = NSTextAlignmentCenter;
-//
-//        NSAttributedString *string = [[NSAttributedString alloc]initWithString:[self.childVCs[i] title] attributes:@{NSFontAttributeName:_segementStyle.titleFont, NSParagraphStyleAttributeName:paragraphStyle}];
-//
-//        CGSize size =  [string boundingRectWithSize:CGSizeMake(MAXFLOAT, _segementStyle.segmentHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
-//        NSLog(@" size =  %@", NSStringFromCGSize(size));
-//
-//        btnW = ceil(size.width)+marginW;
-        
         btnW = [self getStringWidthByString:[self.childVCs[i] title] height:_segementStyle.segmentHeight index:i];
         
         titlesWidth+=btnW;
         
-        [_titleWidthArr addObject:@(titlesWidth)];
+        [self.arrTitleX addObject:@(titlesWidth)];
+        [self.titleWidthArr addObject:@(btnW)];
         CGFloat btnX = titlesWidth-btnW;
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    
-        btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
+        btn.frame = CGRectMake(btnX+(btnMarginX), btnY, btnW, btnH);
         [btn setTitle:[self.childVCs[i] title] forState:UIControlStateNormal];
         btn.tag = i;
+        btn.backgroundColor =  [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:arc4random_uniform(256)/255.0];
+ 
         btn.titleLabel.font = _segementStyle.titleFont;
         [btn setTitleColor:_segementStyle.normalTitleColor forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(headerItemClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -98,14 +91,14 @@
     }
     
     
-    self.segementView.contentSize =CGSizeMake(titlesWidth, 0);
+    self.segementView.contentSize =CGSizeMake(titlesWidth+btnMarginX*2, 0);
     self.contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*self.childVCs.count, 0);
     
     if (!_segementStyle.showLine)return;
     _bottomLine = [CALayer layer];
-    CGFloat firstBtnWidth = [self getStringWidthByString:[self.childVCs[0] title] height:btnH index:0];
+    CGFloat firstBtnWidth = [self.titleWidthArr[0] floatValue];
     
-    _bottomLine.frame = CGRectMake(0, self.segementView.bounds.size.height-_segementStyle.scrollLineHeight, firstBtnWidth, _segementStyle.scrollLineHeight);
+    _bottomLine.frame = CGRectMake(btnMarginX, self.segementView.bounds.size.height-_segementStyle.scrollLineHeight, firstBtnWidth, _segementStyle.scrollLineHeight);
     _bottomLine.backgroundColor = _segementStyle.scrollLineColor.CGColor;
     [self.segementView.layer addSublayer:_bottomLine];
     
@@ -176,13 +169,30 @@
     for (UIButton *button in self.segementView.subviews) {
         if (button != btn) [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
-
+//    if (_segementStyle.showLine) {
+//        
+//        CGRect frame = self.bottomLine.frame;
+//        
+//        CGFloat bottomLineX = (index==0?0:[self.arrTitleX[index-1] floatValue])+btnMarginX;
+//        
+//        
+//        frame.origin.x = bottomLineX;
+//        
+//        frame.size.width = [self.titleWidthArr[index] floatValue];
+//        
+//        self.bottomLine.frame = frame;
+//
+//    }
+    
     UIViewController *vc = self.childVCs[index];
     if ([vc isViewLoaded]) {
         return;
     }
     vc.view.frame = CGRectMake(offset, 0, SCREEN_WIDTH, self.contentScrollView.frame.size.height);
     [self.contentScrollView addSubview:vc.view];
+    
+    
+   
 }
 
 
@@ -204,10 +214,17 @@
     [leftBtn setTitleColor:RgbColor(leftScale, 0, 0, 1) forState:UIControlStateNormal];
     [rightBtn setTitleColor:RgbColor(rightScale, 0, 0, 1) forState:UIControlStateNormal];
     NSLog(@"%f---%f",leftScale,rightScale);
-
+   
+    
     CGRect frame = self.bottomLine.frame;
-    CGFloat lbW = leftBtn.frame.size.width;
-    frame.origin.x = lbW*scale;
+    CGFloat oldLineW = frame.size.width;
+    CGFloat bottomLineX = (leftIndex==0?0:[self.arrTitleX[leftIndex-1] floatValue])+btnMarginX;
+    
+    
+    frame.origin.x = bottomLineX;
+
+    frame.size.width = [self.titleWidthArr[leftIndex] floatValue];
+
     self.bottomLine.frame = frame;
 
 }
@@ -218,4 +235,17 @@
 
 }
 
+
+- (NSMutableArray *)titleWidthArr{
+    if (!_titleWidthArr) {
+        _titleWidthArr = [NSMutableArray array];
+    }
+    return _titleWidthArr;
+}
+- (NSMutableArray *)arrTitleX{
+    if (!_arrTitleX) {
+        _arrTitleX = [NSMutableArray array];
+    }
+    return _arrTitleX;
+}
 @end
