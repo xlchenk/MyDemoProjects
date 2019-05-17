@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UIColor *normalTitleColor;
 @property(nonatomic,strong) UIColor *scrollLineColor;
 @property(nonatomic,assign) CGFloat scrollLineHeight;
+@property(nonatomic,assign) NSInteger marginW;
 @end
 
 NS_ASSUME_NONNULL_END

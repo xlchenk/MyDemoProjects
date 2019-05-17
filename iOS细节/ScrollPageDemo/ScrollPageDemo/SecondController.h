@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XLSrollPageView/XLScrollViewChildVCDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondController : UIViewController

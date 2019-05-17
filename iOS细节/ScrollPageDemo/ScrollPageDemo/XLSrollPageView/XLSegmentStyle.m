@@ -20,6 +20,7 @@
         _normalTitleColor = [UIColor blackColor];
         _scrollLineColor = [UIColor redColor];
         _scrollLineHeight = 2.f;
+        _marginW = 10;
     }
     return self;
 }

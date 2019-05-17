@@ -7,13 +7,18 @@
 //
 
 #import "XLSocollPageView.h"
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGTH [UIScreen mainScreen].bounds.size.height
 #define RgbColor(r,g,b,a) [UIColor colorWithRed:(r) green:(g) blue:(b) alpha:a]
 
-#define marginW 20;
-#define btnMarginX 5
+ 
+#define btnMarginX 10
+
 @interface XLSocollPageView ()<UIScrollViewDelegate>
+
+
+
 @property (strong, nonatomic) NSArray *titlesArray;
 @property (weak, nonatomic) UIViewController *parentViewController;
 @property(nonatomic,strong) NSArray *childVCs;
@@ -69,13 +74,13 @@
         
         titlesWidth+=btnW;
         
-        [self.arrTitleX addObject:@(titlesWidth)];
         [self.titleWidthArr addObject:@(btnW)];
-        CGFloat btnX = titlesWidth-btnW;
+        CGFloat btnX = btnMarginX+(titlesWidth-btnW)+_segementStyle.marginW*i;
+         [self.arrTitleX addObject:@(btnX)];
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        btn.frame = CGRectMake(btnX+(btnMarginX), btnY, btnW, btnH);
+        btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
         [btn setTitle:[self.childVCs[i] title] forState:UIControlStateNormal];
         btn.tag = i;
 //        btn.backgroundColor =  [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:arc4random_uniform(256)/255.0];
@@ -91,60 +96,17 @@
     }
     
     
-    self.segementView.contentSize =CGSizeMake(titlesWidth+btnMarginX*2, 0);
+    self.segementView.contentSize =CGSizeMake([self.arrTitleX.lastObject floatValue]+[self.titleWidthArr.lastObject floatValue]+btnMarginX, 0);
     self.contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*self.childVCs.count, 0);
     
     if (!_segementStyle.showLine)return;
     _bottomLine = [CALayer layer];
     CGFloat firstBtnWidth = [self.titleWidthArr[0] floatValue];
     
-    _bottomLine.frame = CGRectMake(btnMarginX, self.segementView.bounds.size.height-_segementStyle.scrollLineHeight, firstBtnWidth, _segementStyle.scrollLineHeight);
+    _bottomLine.frame = CGRectMake([self.arrTitleX.firstObject floatValue], self.segementView.bounds.size.height-_segementStyle.scrollLineHeight, firstBtnWidth, _segementStyle.scrollLineHeight);
     _bottomLine.backgroundColor = _segementStyle.scrollLineColor.CGColor;
     [self.segementView.layer addSublayer:_bottomLine];
     
-}
-- (void)headerItemClick:(UIButton *)button{
-    NSInteger index = button.tag;
-    CGPoint offset = self.contentScrollView.contentOffset;
-    offset.x = index*SCREEN_WIDTH;
-    [self.contentScrollView setContentOffset:offset animated:YES];
-}
-
-- (CGFloat)getStringWidthByString:(NSString *)string height:(CGFloat)height index:(NSInteger)index{
-    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSAttributedString *muStr = [[NSAttributedString alloc]initWithString:[self.childVCs[index] title] attributes:@{NSFontAttributeName:_segementStyle.titleFont, NSParagraphStyleAttributeName:paragraphStyle}];
-    CGSize size =  [muStr boundingRectWithSize:CGSizeMake(MAXFLOAT, _segementStyle.segmentHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
- 
-   CGFloat width = ceil(size.width)+marginW;
-    return width;
-}
-- (void)setHeaderBackGroundColor:(UIColor *)headerBackGroundColor{
-    _headerBackGroundColor = headerBackGroundColor;
-    self.segementView.backgroundColor = _headerBackGroundColor;
-}
-#pragma mark -- 标题栏
-- (UIScrollView *)segementView{
-    if (!_segementView) {
-        _segementView = [[UIScrollView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y,self.bounds.size.width,_segementStyle.segmentHeight)];
-        _segementView.showsVerticalScrollIndicator = NO;
-        _segementView.showsHorizontalScrollIndicator = NO;
-    }
-    return _segementView;
-}
-#pragma mark -- 内容
-- (UIScrollView *)contentScrollView{
-    if (!_contentScrollView) {
-        _contentScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.segementView.frame), SCREEN_WIDTH, SCREEN_HEIGTH-CGRectGetMaxY(self.segementView.frame))];
-        _contentScrollView.delegate = self;
-        _contentScrollView.pagingEnabled = YES;
-        //        _contentScrollView.backgroundColor =[UIColor cyanColor];
-        _contentScrollView.showsVerticalScrollIndicator = NO;
-        _contentScrollView.showsHorizontalScrollIndicator = NO;
-    }
-    return _contentScrollView;
 }
 
 //动画d滚动结束的时候执行
@@ -155,8 +117,7 @@
     UIButton *btn = self.segementView.subviews[index];
 
     CGPoint titleOffset = self.segementView.contentOffset;
-
-
+    
     titleOffset.x = btn.center.x-SCREEN_WIDTH/2;
     if (titleOffset.x<0) {
         titleOffset.x = 0;
@@ -172,19 +133,22 @@
     if (_segementStyle.showLine) {
         
         CGRect frame = self.bottomLine.frame;
-        
-        CGFloat bottomLineX = (index==0?0:[self.arrTitleX[index-1] floatValue])+btnMarginX;
-        
+ 
+        CGFloat bottomLineX = [self.arrTitleX[index] floatValue];
         
         frame.origin.x = bottomLineX;
         
         frame.size.width = [self.titleWidthArr[index] floatValue];
         
         self.bottomLine.frame = frame;
-
     }
     
-    UIViewController *vc = self.childVCs[index];
+    
+    UIViewController<XLScrollViewChildVCDelegate> *vc = self.childVCs[index];
+    self.delegate = vc;
+    if ([self.delegate respondsToSelector:@selector(xl_viewDidAppearForIndex:)]) {
+        [self.delegate xl_viewDidAppearForIndex:index];
+    }
     if ([vc isViewLoaded]) {
         return;
     }
@@ -192,9 +156,7 @@
     [self.contentScrollView addSubview:vc.view];
     
     
-   
 }
-
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offset = scrollView.contentOffset.x;
@@ -227,6 +189,9 @@
 //
 //    self.bottomLine.frame = frame;
 
+    
+    
+    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -235,6 +200,49 @@
 
 }
 
+- (void)headerItemClick:(UIButton *)button{
+    NSInteger index = button.tag;
+    CGPoint offset = self.contentScrollView.contentOffset;
+    offset.x = index*SCREEN_WIDTH;
+    [self.contentScrollView setContentOffset:offset animated:YES];
+}
+
+- (CGFloat)getStringWidthByString:(NSString *)string height:(CGFloat)height index:(NSInteger)index{
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSAttributedString *muStr = [[NSAttributedString alloc]initWithString:[self.childVCs[index] title] attributes:@{NSFontAttributeName:_segementStyle.titleFont, NSParagraphStyleAttributeName:paragraphStyle}];
+    CGSize size =  [muStr boundingRectWithSize:CGSizeMake(MAXFLOAT, _segementStyle.segmentHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
+    
+    CGFloat width = ceil(size.width);
+    return width;
+}
+- (void)setHeaderBackGroundColor:(UIColor *)headerBackGroundColor{
+    _headerBackGroundColor = headerBackGroundColor;
+    self.segementView.backgroundColor = _headerBackGroundColor;
+}
+#pragma mark -- 标题栏
+- (UIScrollView *)segementView{
+    if (!_segementView) {
+        _segementView = [[UIScrollView alloc]initWithFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y,self.bounds.size.width,_segementStyle.segmentHeight)];
+        _segementView.showsVerticalScrollIndicator = NO;
+        _segementView.showsHorizontalScrollIndicator = NO;
+    }
+    return _segementView;
+}
+#pragma mark -- 内容
+- (UIScrollView *)contentScrollView{
+    if (!_contentScrollView) {
+        _contentScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.segementView.frame), SCREEN_WIDTH, SCREEN_HEIGTH-CGRectGetMaxY(self.segementView.frame))];
+        _contentScrollView.delegate = self;
+        _contentScrollView.pagingEnabled = YES;
+        //        _contentScrollView.backgroundColor =[UIColor cyanColor];
+        _contentScrollView.showsVerticalScrollIndicator = NO;
+        _contentScrollView.showsHorizontalScrollIndicator = NO;
+    }
+    return _contentScrollView;
+}
 
 - (NSMutableArray *)titleWidthArr{
     if (!_titleWidthArr) {

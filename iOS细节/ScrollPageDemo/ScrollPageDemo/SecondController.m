@@ -7,8 +7,8 @@
 //
 
 #import "SecondController.h"
-
-@interface SecondController ()<UITableViewDelegate,UITableViewDataSource>
+#import "XLSrollPageView/XLScrollViewChildVCDelegate.h"
+@interface SecondController ()<UITableViewDelegate,UITableViewDataSource,XLScrollViewChildVCDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view from its nib.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
 
 }
@@ -35,5 +36,9 @@
     cell.textLabel.text = [NSString stringWithFormat:@"哈喽--%ld",indexPath.row];
     cell.textLabel.textColor = [UIColor blackColor];
     return cell;
+}
+- (void)xl_viewDidAppearForIndex:(NSInteger)index{
+    NSLog(@"自控制器---%ld",index);
+    
 }
 @end

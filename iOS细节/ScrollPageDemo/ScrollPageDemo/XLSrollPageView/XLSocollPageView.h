@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "XLSegmentStyle.h"
+#import "XLScrollViewChildVCDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
-
+ 
 @interface XLSocollPageView : UIView
+
+@property(nonatomic,assign) id<XLScrollViewChildVCDelegate>delegate;
 
 @property(nonatomic,strong) UIColor *headerBackGroundColor;
 

@@ -62,6 +62,7 @@
 		596DC9D1228BB08B004542EB /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
 		59A01F2C228BBE0100AD561E /* XLSocollPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLSocollPageView.h; sourceTree = "<group>"; };
 		59A01F2D228BBE0100AD561E /* XLSocollPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLSocollPageView.m; sourceTree = "<group>"; };
+		9F1552B8228E958500D9386E /* XLScrollViewChildVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLScrollViewChildVCDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +113,11 @@
 		591650E922890B81009ECABC /* ScrollPageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9F1552B4228E915E00D9386E /* XLSrollPageView */,
 				591650EA22890B81009ECABC /* AppDelegate.h */,
 				591650EB22890B81009ECABC /* AppDelegate.m */,
 				591650ED22890B81009ECABC /* ViewController.h */,
 				591650EE22890B81009ECABC /* ViewController.m */,
-				59A01F2C228BBE0100AD561E /* XLSocollPageView.h */,
-				59A01F2D228BBE0100AD561E /* XLSocollPageView.m */,
-				595AFFC9228D113A0066E36C /* XLSegmentStyle.h */,
-				595AFFCA228D113A0066E36C /* XLSegmentStyle.m */,
 				596DC9CF228BB08B004542EB /* SecondController.h */,
 				596DC9D0228BB08B004542EB /* SecondController.m */,
 				596DC9D1228BB08B004542EB /* SecondController.xib */,
@@ -148,6 +146,18 @@
 				5916511022890B83009ECABC /* Info.plist */,
 			);
 			path = ScrollPageDemoUITests;
+			sourceTree = "<group>";
+		};
+		9F1552B4228E915E00D9386E /* XLSrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				59A01F2C228BBE0100AD561E /* XLSocollPageView.h */,
+				59A01F2D228BBE0100AD561E /* XLSocollPageView.m */,
+				595AFFC9228D113A0066E36C /* XLSegmentStyle.h */,
+				595AFFCA228D113A0066E36C /* XLSegmentStyle.m */,
+				9F1552B8228E958500D9386E /* XLScrollViewChildVCDelegate.h */,
+			);
+			path = XLSrollPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
