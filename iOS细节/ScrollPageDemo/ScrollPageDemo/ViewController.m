@@ -12,7 +12,6 @@
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGTH [UIScreen mainScreen].bounds.size.height
-
 #define RgbColor(r,g,b,a) [UIColor colorWithRed:(r) green:(g) blue:(b) alpha:a]
 @interface ViewController ()
 

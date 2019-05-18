@@ -29,6 +29,8 @@
 @property(nonatomic,strong) NSMutableArray *titleWidthArr;
 @property(nonatomic,strong) NSMutableArray *arrTitleX;
 
+
+@property(nonatomic,assign) CGRect currentLineFrame;
 @end
 @implementation XLSocollPageView{
     XLSegmentStyle *_segementStyle;
@@ -111,7 +113,7 @@
 
 //动画d滚动结束的时候执行
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-    NSLog(@"scrollViewDidEndScrollingAnimation--%f",scrollView.contentOffset.x);
+//    NSLog(@"scrollViewDidEndScrollingAnimation--%f",scrollView.contentOffset.x);
     CGFloat offset = scrollView.contentOffset.x;
     NSInteger index = offset/SCREEN_WIDTH;
     UIButton *btn = self.segementView.subviews[index];
@@ -131,20 +133,21 @@
         if (button != btn) [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     if (_segementStyle.showLine) {
-        
+
         CGRect frame = self.bottomLine.frame;
- 
+
         CGFloat bottomLineX = [self.arrTitleX[index] floatValue];
-        
+
         frame.origin.x = bottomLineX;
-        
+
         frame.size.width = [self.titleWidthArr[index] floatValue];
-        
+
         self.bottomLine.frame = frame;
     }
     
-    
+  
     UIViewController<XLScrollViewChildVCDelegate> *vc = self.childVCs[index];
+    
     self.delegate = vc;
     if ([self.delegate respondsToSelector:@selector(xl_viewDidAppearForIndex:)]) {
         [self.delegate xl_viewDidAppearForIndex:index];
@@ -154,8 +157,6 @@
     }
     vc.view.frame = CGRectMake(offset, 0, SCREEN_WIDTH, self.contentScrollView.frame.size.height);
     [self.contentScrollView addSubview:vc.view];
-    
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -175,25 +176,26 @@
     //    rigitLb.textColor = RgbColor(0.4+0.6*rightScale, 0.6-0.6*rightScale, 0.7-0.7*rightScale, 1);
     [leftBtn setTitleColor:RgbColor(leftScale, 0, 0, 1) forState:UIControlStateNormal];
     [rightBtn setTitleColor:RgbColor(rightScale, 0, 0, 1) forState:UIControlStateNormal];
-//    NSLog(@"%f---%f",leftScale,rightScale);
+    NSLog(@"%f---%f---%f",leftScale,rightScale,scale);
    
     
-//    CGRect frame = self.bottomLine.frame;
-//    CGFloat oldLineW = frame.size.width;
-//    CGFloat bottomLineX = (leftIndex==0?0:[self.arrTitleX[leftIndex-1] floatValue])+btnMarginX;
-//
-//
-//    frame.origin.x = bottomLineX;
-//
-//    frame.size.width = [self.titleWidthArr[leftIndex] floatValue];
-//
-//    self.bottomLine.frame = frame;
-
     
     
     
+    //bottomLine渐变偏移量 是当前宽度+marginW的u距离
+//    CGRect currentLineFrame = self.bottomLine.frame;
+//    //取出当前bottomLine的X值
+//    CGFloat currentLineX = [self.arrTitleX[leftIndex] floatValue];
+//    //取出当前title宽度
+//    CGFloat currentTitleW = [self.titleWidthArr[leftIndex] floatValue];
+//
+//    currentLineFrame.origin.x = currentLineX+(currentTitleW+_segementStyle.marginW)*rightScale;
+//     currentLineFrame.size.width = [self.titleWidthArr[leftIndex] floatValue];
+//    self.currentLineFrame = currentLineFrame;
+//
+//    self.bottomLine.frame = currentLineFrame;
+ 
 }
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
 
     [self scrollViewDidEndScrollingAnimation:scrollView];
