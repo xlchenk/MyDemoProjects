@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import <sys/socket.h>
+#import <arpa/inet.h>
+#import <netinet/in.h>
 @interface ViewController ()
 
 @end
@@ -20,4 +22,26 @@
 }
 
 
+
+
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"111111");
+//        [self performSelector:@selector(test) withObject:nil afterDelay:0];
+//
+//          NSLog(@"222222");
+//         [[NSRunLoop currentRunLoop] run];
+        
+        [self performSelector:@selector(test) withObject:nil];
+        
+    });
+}
+
+
+-(void)test{
+    NSLog(@"333333");
+}
 @end
