@@ -101,7 +101,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     _p.steps++;// setter getter
-}
+} 
 
 /*
  - (Class) class {
