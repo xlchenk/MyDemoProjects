@@ -26,6 +26,15 @@ int main(int argc, const char * argv[]) {
         TZPerson* p = [TZPerson new];
         
         TZDog* d = [TZDog new];
+//        Method m1 = class_getInstanceMethod([p class], @selector(walk));
+//        Method m2 = class_getInstanceMethod([p class], @selector(run));
+//        //获取方法run的方法实现 IMP
+//        IMP imp = method_getImplementation(m2);
+//        //给m1设置方法实现编号
+//
+//        method_setImplementation(m1, imp);
+//        [p walk]; //会执行run方法
+//
         
         object_setClass(p, [d class]);
        // method_setImplementation(m1, (IMP)run);

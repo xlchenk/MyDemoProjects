@@ -13,7 +13,7 @@ extern void instrumentObjcMessageSends(BOOL);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        //runtime 消息打印
         instrumentObjcMessageSends(YES);
         [TZPerson walk];
         instrumentObjcMessageSends(NO);
